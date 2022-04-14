@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;1,300&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: rgb(206, 214, 252);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contenedor {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#caja1 {
+    background-color: rgb(238, 237, 198);
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 10px;
+    text-align: center;
+    text-transform: capitalize;
+}
+#temperatura-valor {
+    font-size: 55px;
+}
+#temperatura-descripcion{
+font-size: 20px;
+}
+#caja2 {
+    background-color: rgb(238, 237, 198);
+    height: 20vh;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+#caja3 {
+    background-color: rgb(238, 237, 198);
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+@media (max-width: 648px){
+    #contenedor {
+        flex-direction: column;
+    }
+    
+}
+
+@media (max-width: 261px){
+    #caja3 {
+        text-align: center;
+    }
+    
+}
