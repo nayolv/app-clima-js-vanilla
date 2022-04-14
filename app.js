@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   let lon;
   let lat;
-  var secretkey = config.SECRET_KEY;
+  const secretkey = config.SECRET_KEY;
 
   let temperaturaValor = document.getElementById("temperatura-valor");
   let temperaturaDescripcion = document.getElementById("temperatura-descripcion");
