@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
   let lon;
   let lat;
+  var secretkey = config.SECRET_KEY;
 
   let temperaturaValor = document.getElementById("temperatura-valor");
   let temperaturaDescripcion = document.getElementById("temperatura-descripcion");
@@ -18,10 +19,10 @@ window.addEventListener("load", () => {
       lat = posicion.coords.latitude;
 
       //ubicacion actual
-       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&units=metric&appid=fa60dbc1bc716c8ae78ee3b7590cbe1f`;
+       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&units=metric&appid=` + secretkey;
 
       //ubicacion por ciudad
-      //const url = `https://api.openweathermap.org/data/2.5/weather?q=Mexico&lang=es&units=metric&appid=fa60dbc1bc716c8ae78ee3b7590cbe1f`;
+      //const url = `https://api.openweathermap.org/data/2.5/weather?q=Mexico&lang=es&units=metric&appid=` + secretkey;
 
       //console.log(url);
 
@@ -33,8 +34,6 @@ window.addEventListener("load", () => {
 
           const temp = Math.round(data.main.temp);
           temperaturaValor.textContent = `${temp} °C`;
-        
-          //console.log(data.wind.speed)
           temperaturaDescripcion.textContent = data.weather[0].description;
           ubicacion.textContent = data.name
           vientoVelocidad.textContent = `${data.wind.speed} m/s`;
