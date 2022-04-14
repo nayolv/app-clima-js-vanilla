@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
   let lon;
   let lat;
-  const secretkey = config.SECRET_KEY;
+  //const secretkey = config.SECRET_KEY;
 
   let temperaturaValor = document.getElementById("temperatura-valor");
   let temperaturaDescripcion = document.getElementById("temperatura-descripcion");
@@ -19,7 +19,7 @@ window.addEventListener("load", () => {
       lat = posicion.coords.latitude;
 
       //ubicacion actual
-       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&units=metric&appid=` + secretkey;
+       const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&lang=es&units=metric&appid=fa60dbc1bc716c8ae78ee3b7590cbe1f`;
 
       //ubicacion por ciudad
       //const url = `https://api.openweathermap.org/data/2.5/weather?q=Mexico&lang=es&units=metric&appid=` + secretkey;
